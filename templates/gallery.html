@@ -10,40 +10,214 @@
             background-color: black;
             color: white;
         }
+		
+		
+		    .bikes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
         .bike {
             padding: 20px;
             margin: 10px;
             border: 2px solid white;
+		flex: 0 0 calc(50% - 20px); /* -20px to account for margins */
+        margin: 10px;
+        text-align: center; /* Center the text and inline elements */
+        box-sizing: border-box;
+    }
         }
+		
+		
+		
+	
+
+        /* Adjust this width percentage for desktop as required to adjust the number of bikes in a row */
+        width: calc(30% - 10%); /* 30% width with 5% margins on each side; adjust the 30% value as needed */
+    }
+
+		
+		
+		
+		
+		
+		
+		
+		
 
         .bike-description {
             margin-bottom: 10px;
         }
 
-        .slideshow-container img {
-            width: 100%;
-        }
+      
+    /* Slideshow 4:3 aspect ratio */
+    .slideshow-container {
+        display: flex;
+        justify-content: center; /* Horizontally centers the image */
+        align-items: center; /* Vertically centers the image */
+        position: relative;
+        width: 100%;
+        padding-top: 75%; /* 4:3 Aspect Ratio */
+        overflow: hidden;
+    }
 
-        /* ... [other styles] ... */
+    .slideshow-container img {
+        margin: auto; /* Centers the image in case it's smaller than the container */
+        display: block; /* Removes any additional line-height or spacing around the image */
+        max-width: 100%; /* Ensures the image does not stretch outside its container */
+        max-height: 100%; 
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 50%; /* Centers the image vertically */
+        left: 50%; /* Centers the image horizontally */
+        transform: translate(-50%, -50%); /* Shifts the image back up and left by half of its own width and height */
+    }
+
+    /* Mobile adjustments */
+    @media screen and (max-width: 767px) {
+        .bike {
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px;
+        cursor: pointer;
+    }
+
+.prev, .next {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.prev:hover, .next:hover {
+    opacity: 1;
+}
+
+.prev {
+    left: 10px;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.next {
+    right: 10px;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent white;
+}
     </style>
+	
+	
+<script>
+    function setupSlideshow() {
+        const slideShowIntervals = [];
+
+        // Handle each slideshow
+        document.querySelectorAll('.slideshow-container').forEach((container, idx) => {
+            let currentSlideIndex = 0;
+            const slides = container.querySelectorAll('img');
+
+            slides[currentSlideIndex].style.display = 'block';
+
+            slideShowIntervals.push(setInterval(() => {
+                slides[currentSlideIndex].style.display = 'none';
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                slides[currentSlideIndex].style.display = 'block';
+            }, 2000));
+
+            // Handle manual slide switching
+            container.querySelector('.prev').addEventListener('click', () => {
+                slides[currentSlideIndex].style.display = 'none';
+                currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+                slides[currentSlideIndex].style.display = 'block';
+                clearInterval(slideShowIntervals[idx]);
+            });
+
+            container.querySelector('.next').addEventListener('click', () => {
+                slides[currentSlideIndex].style.display = 'none';
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                slides[currentSlideIndex].style.display = 'block';
+                clearInterval(slideShowIntervals[idx]);
+            });
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", setupSlideshow);
+</script>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </head>
 <body>
   <!-- ... [previous gallery.html content] ... -->
 
+
+<div class="bikes-container">
+
+
+
+
+
+<div class="bike">
+    <div class="bike-description">bikedescription1</div>
+    <div class="slideshow-container">
+        <!-- Images are automatically loaded from the respective folder -->
+        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
+        <img src="/static/slideshow/bike1/{{ image }}">
+        {% endfor %}
+        <span class="prev"></span>
+        <span class="next"></span>
+    </div>
+    <stripe-buy-button
+        bikeshop-id="bike-stripe1"
+        buy-button-id="enter button here"
+        publishable-key="enter pk here"
+    ></stripe-buy-button>
+</div>
+
+
+
     <div class="bike">
-        <div class="bike-description">bikedescription4</div>
+        <div class="bike-description">test XD</div>
         <div class="slideshow-container">
             <img src="/static/slideshow/bike-image4a.png">
+
+
             <!-- Add more images like this for bike 4: -->
             <!-- <img src="/static/slideshow/bike-image4b.png"> -->
             <!-- <img src="/static/slideshow/bike-image4c.png"> -->
         </div>
-        <stripe-buy-button
-            bikeshop-id="bike-stripe4"
-            buy-button-id="enter button here"
-            publishable-key="enter pk here"
-        ></stripe-buy-button>
+      <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1NqqVjEgtx1au46GSyjMnoGl"
+  publishable-key="pk_live_51Lxm6sEgtx1au46GHhDtjk3JZ04OaA8p7T6xM4lQFLxfbPotRsuT4AhoM4WA0myCsirZeQN32vnUvUSmn1zVyD3m00docojbx7"
+>
+</stripe-buy-button>
     </div>
 
     <div class="bike">
@@ -75,6 +249,9 @@
             publishable-key="enter pk here"
         ></stripe-buy-button>
     </div>
+
+</div> 
+
 
     <!-- Add new bikes by copying one of the bike divs and updating the numbers/details accordingly -->
 </body>
