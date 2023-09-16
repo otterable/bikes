@@ -5,85 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Used Bikes Gallery</title>
     <style>
-        /* Internal styles */
-        body {
-            background-color: black;
-            color: white;
-        }
-		
-		
-		    .bikes-container {
+    /* Global styles */
+    body {
+        background-color: black;
+		    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    }
+
+    .bikes-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-        .bike {
-            padding: 20px;
-            margin: 10px;
-            border: 2px solid white;
-		flex: 0 0 calc(50% - 20px); /* -20px to account for margins */
-        margin: 10px;
-        text-align: center; /* Center the text and inline elements */
-        box-sizing: border-box;
-    }
-        }
-		
-		
-		
-	
+   .bike {
+    padding: 20px;
+    margin: 10px;
+    border: 8px solid white;
+    flex: 0 0 calc(30% - 20px); /* You can adjust this to control the number of bikes per row on desktop */
+    text-align: center; /* Center the text and inline elements */
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3); /* Black with 30% opacity */
+    border-radius: 15px;  /* Making the corners round */
+}
 
-        /* Adjust this width percentage for desktop as required to adjust the number of bikes in a row */
-        width: calc(30% - 10%); /* 30% width with 5% margins on each side; adjust the 30% value as needed */
+    .bike-description {
+        margin-bottom: 10px;
     }
 
-		
-		
-		
-		
-		
-		
-		
-		
+/* Slideshow 4:3 aspect ratio */
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+    overflow: hidden;
+    margin-bottom: 15px; /* Adjust as required */
+    border-radius: 15px;  /* Making the corners round */
+}
 
-        .bike-description {
-            margin-bottom: 10px;
-        }
+.slideshow-container img {
+    margin: auto;
+    display: none; /* Hide all images by default */
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-      
-    /* Slideshow 4:3 aspect ratio */
-    .slideshow-container {
-        display: flex;
-        justify-content: center; /* Horizontally centers the image */
-        align-items: center; /* Vertically centers the image */
-        position: relative;
-        width: 100%;
-        padding-top: 75%; /* 4:3 Aspect Ratio */
-        overflow: hidden;
-    }
-
-    .slideshow-container img {
-        margin: auto; /* Centers the image in case it's smaller than the container */
-        display: block; /* Removes any additional line-height or spacing around the image */
-        max-width: 100%; /* Ensures the image does not stretch outside its container */
-        max-height: 100%; 
-        width: auto;
-        height: auto;
-        position: absolute;
-        top: 50%; /* Centers the image vertically */
-        left: 50%; /* Centers the image horizontally */
-        transform: translate(-50%, -50%); /* Shifts the image back up and left by half of its own width and height */
-    }
-
-    /* Mobile adjustments */
-    @media screen and (max-width: 767px) {
-        .bike {
-            width: 90%;
-            margin-left: 5%;
-            margin-right: 5%;
-        }
-    }
-
+.slideshow-container img:first-child {
+    display: block; /* Display the first image by default */
+}
     .arrow {
         position: absolute;
         top: 50%;
@@ -92,35 +73,105 @@
         cursor: pointer;
     }
 
-.prev, .next {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.2s;
+    .prev, .next {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+    }
+
+    .prev:hover, .next:hover {
+        opacity: 1;
+    }
+
+    .prev {
+        left: 10px;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    .next {
+        right: 10px;
+        border-width: 10px 0 10px 15px;
+        border-color: transparent transparent transparent white;
+    }
+
+    /* Mobile-specific styles */
+    @media screen and (max-width: 767px) {
+        .bike {
+            flex-basis: 95%; /* Sets bike width to full width on mobile */
+            margin: 0; /* Removes side margins */
+            padding: 5px; /* Adjusts padding for mobile */
+			        margin-bottom: 20px; /* Adjust as required */
+
+        }
+    }
+	
 }
 
-.prev:hover, .next:hover {
-    opacity: 1;
+
+   .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* or adjust as needed */
+    padding: 20px 0; /* Gives some spacing above and below the logo */
 }
 
-.prev {
-    left: 10px;
-    border-width: 10px 15px 10px 0;
-    border-color: transparent white transparent transparent;
+
+        .logo {
+            max-width: 8%; /* Reduced by 50% */
+            height: auto;
+        }
+	
 }
 
-.next {
-    right: 10px;
-    border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent white;
+@media screen and (max-width: 767px) {
+    .logo {
+        width: 40%; /* Adjusts the logo width to 60% of its container on mobile. Change as needed. */
+    }
 }
-    </style>
+
+/* Video background */
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+
+    .info-title {
+        font-weight: bold;
+        font-size: 25px;
+        margin: 10px;
+    }
+
+ .info-subtitle {
+        font-weight: bold;
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    .info-text {
+        font-size: 20px; /* Adjust the font size as needed */
+    }
+
+    .stripe-container {
+        margin-top: 15px;
+}
+
+</style>
+
 	
 	
 <script>
@@ -160,7 +211,9 @@
     document.addEventListener("DOMContentLoaded", setupSlideshow);
 </script>
 
-	
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
 	
 	
 	
@@ -170,18 +223,32 @@
 	
 	
 </head>
+
 <body>
-  <!-- ... [previous gallery.html content] ... -->
+	<video id="video-background" autoplay muted loop>
+        <source src="{{ url_for('static', filename='video.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+	
+    <div class="logo-container">
+            <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="Logo" id="logo">
+        </div>
 
 
+
+
+<!-- Here is the start of the container, within which all bike listings are contained: -->
 <div class="bikes-container">
 
+<!-- To create a new bike listing, just copypaste the code below, and change respective values - images, stripe link, caledly, etc. -->
 
-
-
-
+<!-- Here is the beginning of a bike listing: -->
 <div class="bike">
-    <div class="bike-description">bikedescription1</div>
+
+	<!-- Here is the bike model name: -->
+    <div class="info-title">Bike title 1</div>
+
+	<!-- Here is the slideshow: -->
     <div class="slideshow-container">
         <!-- Images are automatically loaded from the respective folder -->
         {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
@@ -190,70 +257,192 @@
         <span class="prev"></span>
         <span class="next"></span>
     </div>
-    <stripe-buy-button
-        bikeshop-id="bike-stripe1"
-        buy-button-id="enter button here"
-        publishable-key="enter pk here"
-    ></stripe-buy-button>
+	     
+		 <!-- Here is the description of the bike: -->
+		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
+	    <div class="info-text">Otter:</div>
+	    <div class="info-text">Weasel:</div>
+	    <div class="info-text">lolzS:</div>
+	
+		<!-- Here is the stripe button: -->
+	    <div class="stripe-container">
+		<stripe-buy-button
+		buy-button-id="buy_btn_1NqqVjEgtx1au46GSyjMnoGl"
+		publishable-key="pk_live_51Lxm6sEgtx1au46GHhDtjk3JZ04OaA8p7T6xM4lQFLxfbPotRsuT4AhoM4WA0myCsirZeQN32vnUvUSmn1zVyD3m00docojbx7">
+		</stripe-buy-button>
+		</div>
+		
+<!-- Here is the end of the bike listing: -->
 </div>
 
+<!-- Here is the beginning of a bike listing: -->
+<div class="bike">
 
+	<!-- Here is the bike model name: -->
+    <div class="info-title">Bike title 1</div>
 
-    <div class="bike">
-        <div class="bike-description">test XD</div>
-        <div class="slideshow-container">
-            <img src="/static/slideshow/bike-image4a.png">
-
-
-            <!-- Add more images like this for bike 4: -->
-            <!-- <img src="/static/slideshow/bike-image4b.png"> -->
-            <!-- <img src="/static/slideshow/bike-image4c.png"> -->
-        </div>
-      <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1NqqVjEgtx1au46GSyjMnoGl"
-  publishable-key="pk_live_51Lxm6sEgtx1au46GHhDtjk3JZ04OaA8p7T6xM4lQFLxfbPotRsuT4AhoM4WA0myCsirZeQN32vnUvUSmn1zVyD3m00docojbx7"
->
-</stripe-buy-button>
+	<!-- Here is the slideshow: -->
+    <div class="slideshow-container">
+        <!-- Images are automatically loaded from the respective folder -->
+        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
+        <img src="/static/slideshow/bike1/{{ image }}">
+        {% endfor %}
+        <span class="prev"></span>
+        <span class="next"></span>
     </div>
+	     
+		 <!-- Here is the description of the bike: -->
+		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
+	    <div class="info-text">Otter:</div>
+	    <div class="info-text">Weasel:</div>
+	    <div class="info-text">lolzS:</div>
+	
+		<!-- Here is the stripe button: -->
+	    <div class="stripe-container">
+		<stripe-buy-button
+		buy-button-id="buy_btn_1NqqVjEgtx1au46GSyjMnoGl"
+		publishable-key="pk_live_51Lxm6sEgtx1au46GHhDtjk3JZ04OaA8p7T6xM4lQFLxfbPotRsuT4AhoM4WA0myCsirZeQN32vnUvUSmn1zVyD3m00docojbx7">
+		</stripe-buy-button>
+		</div>
+		
+<!-- Here is the end of the bike listing: -->
+</div>
 
-    <div class="bike">
-        <div class="bike-description">bikedescription5</div>
-        <div class="slideshow-container">
-            <img src="/static/slideshow/bike-image5a.png">
-            <!-- Add more images like this for bike 5: -->
-            <!-- <img src="/static/slideshow/bike-image5b.png"> -->
-            <!-- <img src="/static/slideshow/bike-image5c.png"> -->
-        </div>
-        <stripe-buy-button
-            bikeshop-id="bike-stripe5"
-            buy-button-id="enter button here"
-            publishable-key="enter pk here"
-        ></stripe-buy-button>
+<!-- Here is the beginning of a bike listing: -->
+<div class="bike">
+
+	<!-- Here is the bike model name: -->
+    <div class="info-title">Bike title 1</div>
+
+	<!-- Here is the slideshow: -->
+    <div class="slideshow-container">
+        <!-- Images are automatically loaded from the respective folder -->
+        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
+        <img src="/static/slideshow/bike1/{{ image }}">
+        {% endfor %}
+        <span class="prev"></span>
+        <span class="next"></span>
     </div>
+	     
+		 <!-- Here is the description of the bike: -->
+		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
+	    <div class="info-text">Otter:</div>
+	    <div class="info-text">Weasel:</div>
+	    <div class="info-text">lolzS:</div>
+	
+		<!-- Here is the stripe button: -->
+	    <div class="stripe-container">
+		<stripe-buy-button
+		buy-button-id="buy_btn_1NqqVjEgtx1au46GSyjMnoGl"
+		publishable-key="pk_live_51Lxm6sEgtx1au46GHhDtjk3JZ04OaA8p7T6xM4lQFLxfbPotRsuT4AhoM4WA0myCsirZeQN32vnUvUSmn1zVyD3m00docojbx7">
+		</stripe-buy-button>
+		</div>
+		
+<!-- Here is the end of the bike listing: -->
+</div>
 
-    <div class="bike">
-        <div class="bike-description">bikedescription6</div>
-        <div class="slideshow-container">
-            <img src="/static/slideshow/bike-image6a.png">
-            <!-- Add more images like this for bike 6: -->
-            <!-- <img src="/static/slideshow/bike-image6b.png"> -->
-            <!-- <img src="/static/slideshow/bike-image6c.png"> -->
-        </div>
-        <stripe-buy-button
-            bikeshop-id="bike-stripe6"
-            buy-button-id="enter button here"
-            publishable-key="enter pk here"
-        ></stripe-buy-button>
+<!-- Here is the beginning of a bike listing: -->
+<div class="bike">
+
+	<!-- Here is the bike model name: -->
+    <div class="info-title">Bike title 1</div>
+
+	<!-- Here is the slideshow: -->
+    <div class="slideshow-container">
+        <!-- Images are automatically loaded from the respective folder -->
+        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
+        <img src="/static/slideshow/bike1/{{ image }}">
+        {% endfor %}
+        <span class="prev"></span>
+        <span class="next"></span>
     </div>
+	     
+		 <!-- Here is the description of the bike: -->
+		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
+	    <div class="info-text">Otter:</div>
+	    <div class="info-text">Weasel:</div>
+	    <div class="info-text">lolzS:</div>
+	
+		<!-- Here is the stripe button: -->
+	    <div class="stripe-container">
+		<stripe-buy-button
+		buy-button-id="buy_btn_1NqqVjEgtx1au46GSyjMnoGl"
+		publishable-key="pk_live_51Lxm6sEgtx1au46GHhDtjk3JZ04OaA8p7T6xM4lQFLxfbPotRsuT4AhoM4WA0myCsirZeQN32vnUvUSmn1zVyD3m00docojbx7">
+		</stripe-buy-button>
+		</div>
+		
+<!-- Here is the end of the bike listing: -->
+</div>
 
+<!-- Here is the beginning of a bike listing: -->
+<div class="bike">
+
+	<!-- Here is the bike model name: -->
+    <div class="info-title">Bike title 1</div>
+
+	<!-- Here is the slideshow: -->
+    <div class="slideshow-container">
+        <!-- Images are automatically loaded from the respective folder -->
+        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
+        <img src="/static/slideshow/bike1/{{ image }}">
+        {% endfor %}
+        <span class="prev"></span>
+        <span class="next"></span>
+    </div>
+	     
+		 <!-- Here is the description of the bike: -->
+		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
+	    <div class="info-text">Otter:</div>
+	    <div class="info-text">Weasel:</div>
+	    <div class="info-text">lolzS:</div>
+	
+		<!-- Here is the stripe button: -->
+	    <div class="stripe-container">
+		<stripe-buy-button
+		buy-button-id="buy_btn_1NqqVjEgtx1au46GSyjMnoGl"
+		publishable-key="pk_live_51Lxm6sEgtx1au46GHhDtjk3JZ04OaA8p7T6xM4lQFLxfbPotRsuT4AhoM4WA0myCsirZeQN32vnUvUSmn1zVyD3m00docojbx7">
+		</stripe-buy-button>
+		</div>
+<!-- Here is the end of the bike listing: -->
+</div>
+
+<!-- Here is the beginning of a bike listing: -->
+<div class="bike">
+
+	<!-- Here is the bike model name: -->
+    <div class="info-title">Bike title 1</div>
+
+	<!-- Here is the slideshow: -->
+    <div class="slideshow-container">
+        <!-- Images are automatically loaded from the respective folder -->
+        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
+        <img src="/static/slideshow/bike1/{{ image }}">
+        {% endfor %}
+        <span class="prev"></span>
+        <span class="next"></span>
+    </div>
+	     
+		 <!-- Here is the description of the bike: -->
+		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
+	    <div class="info-text">Otter:</div>
+	    <div class="info-text">Weasel:</div>
+	    <div class="info-text">lolzS:</div>
+	
+		<!-- Here is the stripe button: -->
+	    <div class="stripe-container">
+		<stripe-buy-button
+		buy-button-id="buy_btn_1NqqVjEgtx1au46GSyjMnoGl"
+		publishable-key="pk_live_51Lxm6sEgtx1au46GHhDtjk3JZ04OaA8p7T6xM4lQFLxfbPotRsuT4AhoM4WA0myCsirZeQN32vnUvUSmn1zVyD3m00docojbx7">
+		</stripe-buy-button>
+		</div>
+		
+<!-- Here is the end of the bike listing: -->
+</div>
+
+<!-- Here is the end of the bike container: -->
 </div> 
 
 
-    <!-- Add new bikes by copying one of the bike divs and updating the numbers/details accordingly -->
 </body>
 </html>
 
