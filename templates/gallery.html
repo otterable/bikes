@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used Bikes Gallery</title>
+    <style>
+        /* Internal styles */
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .bike {
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid white;
+        }
+
+        .bike-description {
+            margin-bottom: 10px;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+        }
+
+        /* ... [other styles] ... */
+    </style>
+</head>
+<body>
+  <!-- ... [previous gallery.html content] ... -->
+
+    <div class="bike">
+        <div class="bike-description">bikedescription4</div>
+        <div class="slideshow-container">
+            <img src="/static/slideshow/bike-image4a.png">
+            <!-- Add more images like this for bike 4: -->
+            <!-- <img src="/static/slideshow/bike-image4b.png"> -->
+            <!-- <img src="/static/slideshow/bike-image4c.png"> -->
+        </div>
+        <stripe-buy-button
+            bikeshop-id="bike-stripe4"
+            buy-button-id="enter button here"
+            publishable-key="enter pk here"
+        ></stripe-buy-button>
+    </div>
+
+    <div class="bike">
+        <div class="bike-description">bikedescription5</div>
+        <div class="slideshow-container">
+            <img src="/static/slideshow/bike-image5a.png">
+            <!-- Add more images like this for bike 5: -->
+            <!-- <img src="/static/slideshow/bike-image5b.png"> -->
+            <!-- <img src="/static/slideshow/bike-image5c.png"> -->
+        </div>
+        <stripe-buy-button
+            bikeshop-id="bike-stripe5"
+            buy-button-id="enter button here"
+            publishable-key="enter pk here"
+        ></stripe-buy-button>
+    </div>
+
+    <div class="bike">
+        <div class="bike-description">bikedescription6</div>
+        <div class="slideshow-container">
+            <img src="/static/slideshow/bike-image6a.png">
+            <!-- Add more images like this for bike 6: -->
+            <!-- <img src="/static/slideshow/bike-image6b.png"> -->
+            <!-- <img src="/static/slideshow/bike-image6c.png"> -->
+        </div>
+        <stripe-buy-button
+            bikeshop-id="bike-stripe6"
+            buy-button-id="enter button here"
+            publishable-key="enter pk here"
+        ></stripe-buy-button>
+    </div>
+
+    <!-- Add new bikes by copying one of the bike divs and updating the numbers/details accordingly -->
+</body>
+</html>
+
