@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Used Bikes Gallery</title>
+    <title>Reparaturen - Ermine.at</title>
     <style>
     /* Global styles */
 body {
@@ -284,7 +284,7 @@ body, html {
    .whatsapp-container {
     position: fixed;
     bottom: 13px;
-    left: 20px; /* Change from right to left */
+    right: 20px; /* Change from right to left */
 	            z-index: 2;
 
 }
@@ -293,16 +293,16 @@ body, html {
     display: flex;
     align-items: center;
     background-color: #25d366;
-    border-radius: 20px; 
+    border-radius: 80px; 
     padding: 10px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .whatsapp-button img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 80%;
 }
 
 .whatsapp-text {
@@ -332,7 +332,32 @@ body, html {
 
 	}
 
+	/* FAQ Field Styling */
+	.conditions-field {
+		display: none;
+		background-color: rgba(0, 0, 0, 0.7);
+		border-radius: 10px;
+		padding: 20px;
+		margin: 20px auto;
+		color: white;
+		max-width: 70%;
+		text-align: center;
+						margin-bottom: 65px; /* Adjust this value for spacing between the buttons */
 
+	}
+
+	.list-field {
+		display: none;
+		background-color: rgba(0, 0, 0, 0.7);
+		border-radius: 10px;
+		padding: 20px;
+		margin: 20px auto;
+		color: white;
+		max-width: 70%;
+		text-align: center;
+						margin-bottom: 65px; /* Adjust this value for spacing between the buttons */
+
+	}
 
 .buttons-container {
     display: flex;
@@ -355,6 +380,11 @@ body, html {
 	margin-top: 20px;	/* Adds a gap at the bottom of the buttons */
 		margin-right: 20px;	/* Adds a gap at the bottom of the buttons */
 
+}
+
+
+.faq-button:hover, .impressum-button:hover {
+    background-color: #ffffff;  /* A slightly darkened shade */
 }
 
 .google-translate-container {
@@ -473,6 +503,210 @@ body, html {
     }
 	
 	
+    .calendly-button {
+        background-color: #4DAA57;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .calendly-button:hover {
+        background-color: #585123;  /* A darker shade when hovered */
+    }
+	
+	
+	
+	.calendly-button2 {
+        background-color: #2C2C54;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .calendly-button2:hover {
+        background-color: #80A4ED;  /* A darker shade when hovered */
+    }
+	
+		
+	.calendly-button3 {
+        background-color: #F58549;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .calendly-button3:hover {
+        background-color: #A31621;  /* A darker shade when hovered */
+    }
+	
+	.calendly-button4 {
+        background-color: #357DED;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .calendly-button4:hover {
+        background-color: #32E875;  /* A darker shade when hovered */
+    }
+	
+
+		.button {
+		font-weight: bold;
+		border: none;
+		padding: 20px 40px;
+		margin: 5px;
+		cursor: pointer;
+		font-size: 20px;
+		text-decoration: none;
+		display: inline-block;
+		border-radius: 10px;
+		transition: background-color 0.3s ease-in-out;
+	}
+
+	/* For tablets and medium-sized screens (between 1500px and 1023px) */
+	@media screen and (max-width: 1023px) and (min-width: 1500px) {
+		.button {
+			padding: 15px 30px;
+			font-size: 18px;
+		}
+	}
+
+	/* For mobile screens (less than 767px) */
+	@media screen and (max-width: 767px) {
+		.button {
+			padding: 10px 20px;
+			font-size: 16px;
+		}
+	}
+
+			/* Button colors */
+			.button-color-1 { background-color: #003049; color: white; }
+			.button-color-2 { background-color: #D62828; color: white; }
+			.button-color-3 { background-color: #F77F00; color: black; }
+			.button-color-4 { background-color: #FCBF49; color: black; }
+			.button-color-5 { background-color: #EAE2B7; color: black; }
+			.button-color-6 { background-color: #9CB380; color: black; }
+			.button-color-7 { background-color: #1B98E0; color: black; }
+			.button-color-8 { background-color: #2E933C; color: black; }
+			
+			
+			
+			.button-color-1:hover { background-color: #002239; }
+			.button-color-2:hover { background-color: #B61818; }
+			.button-color-3:hover { background-color: #D66A00; }
+			.button-color-4:hover { background-color: #F5AF19; }
+			.button-color-5:hover { background-color: #D9CF9F; }
+			.button-color-6:hover { background-color: #87A266; }
+			.button-color-7:hover { background-color: #1578B6; }
+			.button-color-8:hover { background-color: #1C742A; }
+
+
+}
+}
+}
+
+.google-translate-container {
+    position: fixed;
+    bottom: 13px;
+    left: 20px; /* Position on the left */
+    z-index: 2;
+}
+
+.google-translate-button {
+    display: flex;
+    align-items: center;
+    background-color: #4285F4; /* Google's blue color, you can change this */
+    border-radius: 20px; 
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.google-translate-button img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.google-translate-text {
+    display: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.google-translate-button:hover .google-translate-text {
+    display: inline; /* Display the text when the button is hovered */
+}
+
+	 /* Apply color F77F00 to numbers */
+		.expandable-content .info-text .info-number {
+			color: #F77F00;
+		}
+
+
+.search-container {
+    margin: 20px 0;
+}
+
+#searchBox {
+    padding: 10px;
+	border: 4px solid white;
+    text-align: center; /* This centers the text */
+
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+.results-container {
+    background-color: black;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none; /* Initially hidden */
+}
+
+.results-container p {
+    margin: 0;
+    padding: 8px 10px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.results-container p:last-child {
+    border-bottom: none;
+}
 
 
 
@@ -485,6 +719,32 @@ function toggleFAQ() {
         faqField.style.display = 'none';
     } else {
         faqField.style.display = 'block';
+    }
+}
+
+
+</script>
+
+<script>
+function toggleCONDITIONS() {
+    var conditionsField = document.getElementById('conditionsField');
+    if (conditionsField.style.display === 'block') {
+        conditionsField.style.display = 'none';
+    } else {
+        conditionsField.style.display = 'block';
+    }
+}
+
+
+</script>
+
+<script>
+function toggleLIST() {
+    var listField = document.getElementById('listField');
+    if (listField.style.display === 'block') {
+        listField.style.display = 'none';
+    } else {
+        listField.style.display = 'block';
     }
 }
 
@@ -601,7 +861,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	
 	
-	
+
+
 	
 </head>
 <video id="video-background" autoplay muted loop>
@@ -631,20 +892,57 @@ document.addEventListener('DOMContentLoaded', function() {
 						<div class="logo-container">
 
 				<div class="bike2">
-    <div class="info-title">Generalüberholte Fahrräder in Top-Zustand, zum Top-Preis.</div>
-    <div class="info-subtitle">Wir akzeptieren Bargeld, Karte und Zahlungen per Stripe.</div>
-    <div style="margin-top: 20px;"> <!-- Adding a gap between titles -->
+    <div class="info-title">Lass uns reparieren! ♥</div>
+
         <div class="info-text">
-			Über den weißen Button unten können Sie einen <span style="color: #f77f00;"><strong>Termin für einen Kauf oder eine Probefahrt reservieren.</strong></span>
+			Über den grünen Button unten können Sie einen <span style="color: #f77f00;"><strong>Termin reservieren.</strong></span>
              <div class="info-text">
       Unsere Erreichbarkeit reicht von  <span style="color: #f77f00;"><strong>7 bis 23 Uhr. </strong></span> 
+	      <div style="margin-top: 5px;"> <!-- Adding a gap between titles -->
+
+
         </div>
+
     </div>
 </div>
-			</div>
+			<div class="button-container">
+
+		  	<button class="calendly-button" onclick="openCalendly()">Lass uns reparieren ♥ // Let's repair ♥</button>
+					    <button class="calendly-button4" onclick="toggleLIST()">Suchfunktion – alle verfügbaren Teile</button>
+					    <button class="calendly-button3" onclick="toggleCONDITIONS()">Bedingungen</button>
+
+<button class="calendly-button2" onclick="window.location.href='https://radlzentrum.ermine.at'">Zurück zum Menü</button>
+
+		</div>
+		</div>
+		
+		<div class="list-field" id="listField">
+   		<div class="info-subtitle"><strong>Welche Reparaturen führen Sie durch?</strong></div>
+		<div>Wir bieten eine Möglichkeit,  <span style="color: #f77f00; font-weight: bold;">alle verfügbaren Teile nachzuschlagen.</span></div> 
+		<div> Man kann wirklich alles durchsuchen –  <span style="color: #f77f00; font-weight: bold;">sogar Schrauben.</span> Sie wissen genau, welche Teile wir verwenden.</div>
+		<div>Die meisten Teile werden aus Tschechien importiert. Die meisten Teile werden in China, Deutschland und der Slowakei hergestellt.</div>
+			<div class="search-container">
+    <input type="text" id="searchBox" placeholder="Suche nach Fahrradteilen. Googeln Sie einfach, um die Teile selbst online zu überprüfen." onkeyup="searchParts()">
+    <div id="searchResults" class="results-container"></div>
+</div>
+		
+		</div>  
+		
+
+		<div class="conditions-field" id="conditionsField">
+   		<div class="info-subtitle"><strong>Welche Reparaturen führen Sie durch?</strong></div>
+		<div>Generalreparatur, Bremseneinstellung, Reifenwechsel.. alles.</div>  
+    
+    <div class="info-subtitle"><strong>Wie lange dauern Reparaturen?</strong></div>
+    <p>In den meisten Fällen können Sie Ihr Fahrrad  <span style="color: #f77f00; font-weight: bold;">innerhalb einer Stunde</span> abholen. Sie erhalten  <span style="color: #f77f00; font-weight: bold;">eine SMS und eine E-Mail,</span> wenn Ihr Fahrrad bereit ist.</p>
+
+    <div class="info-subtitle"><strong>Wo ist die Werkstatt und wie werde ich bezahlt?</strong></div>
+    <p><span style="color: #f77f00; font-weight: bold;">1020.</span> Es gibt zwei Werkstätten, die Sie im <span style="color: #f77f00; font-weight: bold;">Terminmenü</span> auswählen können. Sie können in <span style="color: #f77f00; font-weight: bold;">bar, per Revolut oder per Banküberweisung</span> bezahlt werden.</p>
+</div>
+
 
 		<div class="poster-container">
-				<img class="poster-image" src="{{ url_for('static', filename='poster4.png') }}" alt="Poster 1">
+				<img class="poster-image" src="{{ url_for('static', filename='poster5.png') }}" alt="Poster 1">
 			</div>
 			</div>
 		        </div>
@@ -657,40 +955,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- To create a new bike listing, just copypaste the code below, and change respective values - images, stripe link, caledly, etc. -->
 
-<!-- Here is the beginning of a bike listing: -->
-<div class="bike">
-
-	<!-- Here is the bike model name: -->
-    <div class="info-title">Bike title 1</div>
-
-	<!-- Here is the slideshow: -->
-    <div class="slideshow-container">
-        <!-- Images are automatically loaded from the respective folder -->
-        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
-        <img src="/static/slideshow/bike1/{{ image }}">
-        {% endfor %}
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-	     
-		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
-	    <div class="info-text">Otter:</div>
-	    <div class="info-text">Weasel:</div>
-	    <div class="info-text">lolzS:</div>
-	
-		<!-- Here is the stripe button: -->
-	
-		
-	<!-- Calendly Badge-Widget Beginn -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/erminerad/fahrradubergabe-verkauf-bike-sale', text: 'Kaufen / Probefahrt ♥ // Buy / Test ride ♥', color: '#ffffff', textColor: '#0d0d0d', branding: true }); }</script>
-<!-- Calendly Badge-Widget Ende -->
-		
-		
-<!-- Here is the end of the bike listing: -->
-</div>
 
 <!-- Here is the beginning of a bike listing: -->
 <div class="bike">
@@ -723,83 +987,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="bike">
 
 	<!-- Here is the bike model name: -->
-    <div class="info-title">Bike title 1</div>
-
-	<!-- Here is the slideshow: -->
-    <div class="slideshow-container">
-        <!-- Images are automatically loaded from the respective folder -->
-        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
-        <img src="/static/slideshow/bike1/{{ image }}">
-        {% endfor %}
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-	     
-		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
-	    <div class="info-text">Otter:</div>
-	    <div class="info-text">Weasel:</div>
-	    <div class="info-text">lolzS:</div>
-	
-		<!-- Here is the stripe button: -->
-
-		
-<!-- Here is the end of the bike listing: -->
-</div>
-
-<!-- Here is the beginning of a bike listing: -->
-<div class="bike">
-
-	<!-- Here is the bike model name: -->
-    <div class="info-title">Bike title 1</div>
-
-	<!-- Here is the slideshow: -->
-    <div class="slideshow-container">
-        <!-- Images are automatically loaded from the respective folder -->
-        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
-        <img src="/static/slideshow/bike1/{{ image }}">
-        {% endfor %}
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-	     
-		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
-	    <div class="info-text">Otter:</div>
-	    <div class="info-text">Weasel:</div>
-	    <div class="info-text">lolzS:</div>
-	
-		<!-- Here is the stripe button: -->
-
-<!-- Here is the end of the bike listing: -->
-</div>
-
-<!-- Here is the beginning of a bike listing: -->
-<div class="bike">
-
-	<!-- Here is the bike model name: -->
-    <div class="info-title">Bike title 1</div>
-
-	<!-- Here is the slideshow: -->
-    <div class="slideshow-container">
-        <!-- Images are automatically loaded from the respective folder -->
-        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
-        <img src="/static/slideshow/bike1/{{ image }}">
-        {% endfor %}
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-	     
-		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
-	    <div class="info-text">Otter:</div>
-	    <div class="info-text">Weasel:</div>
-	    <div class="info-text">lolzS:</div>
-	
-		<!-- Here is the stripe button: -->
-
-<!-- Here is the end of the bike listing: -->
-</div>
+   
 
 <!-- Here is the beginning of a bike listing: -->
 <div class="bike">
@@ -850,7 +1038,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <p>Ja, geben Sie im Kalender an, welche Fahrräder wir vorbereiten sollen.</p>
     
     <div class="info-subtitle"><strong>Wie funktioniert das Reservierungssystem?</strong></div>
-    <p>Sehr einfach und bequem. Sie wählen einen Termin <span style="color: #f77f00; font-weight: bold;">(7-23 Uhr). </span>Während der von Ihnen gewünschten Zeit haben Sie die Möglichkeit, <span style="color: #f77f00; font-weight: bold;"> Fahrräder zu kaufen oder eine Probefahrt zu machen.</span> Sie erhalten vor dem Termin zwei Erinnerungen  <span style="color: #f77f00; font-weight: bold;"> (24 und 12 Stunden vorher) per E-Mail.</span> </p>
+    <p>Sehr einfach und bequem. Sie wählen einen Termin <span style="color: #f77f00; font-weight: bold;">(7-23 Uhr). </span>Während der von Ihnen gewünschten Zeit haben Sie die Möglichkeit, <span style="color: #f77f00; font-weight: bold;"> Räder an uns zu verkaufen.</span> </p>
 
     <div class="info-subtitle"><strong>Wie kann ich bezahlen?</strong></div>
     <p>Sie können <span style="color: #f77f00; font-weight: bold;">bar, mit Karte und auch online über Stripe bezahlen. </span> Die Online-Zahlung per Stripe ist auf Anfrage ganz einfach möglich.</p>
@@ -883,3 +1071,102 @@ cb=googleTranslateElementInit">
 </body>
 </html>
 
+<script>
+    function openCalendly() {
+        Calendly.showPopupWidget('https://calendly.com/erminerad/fahrradreparatur'); 
+        return false;
+    }
+</script>
+<!-- Calendly Badge-Widget Beginn -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<!-- Calendly Badge-Widget Ende -->
+		
+		
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+    }
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+<script>
+const parts = [
+"Kotflügel/Fenders | blatníky set MAX1 Ventura 24\"-28\"",
+"Bremsbelag/Bremsklotz (direkter Pin) | brzdová botka dřík MAX1 60mm",
+"Bremsbelag/Bremsklotz (mit Gewinde) | brzdová botka závit MAX1 60 mm",
+"Bremshebel/Bremsschalter | brzdové páky MAX1 \"V\" Alu",
+"Reifen/Pneu | plášť CHAOYANG 26x2,10 (559-52) H-5152 27 tpi černý",
+"Reifen/Pneu | plášť KENDA 24x1,5 (507-40) (K-184) černý",
+"Reifen/Pneu | plášť KENDA 26x1,95 (559-50) (K-831) černý",
+"Reifen/Pneu | plášť KENDA 26x1,95 (559-50) (K-892) černý",
+"Reifen/Pneu | plášť KENDA 700x32C (622-32) (K-125) černý",
+"Kotflügel/Fenders | KELLYS Blatníky KLS STORM",
+"Kettenreiniger/Kettenputzmittel | KELLYS Čistič řetězu KLS CRYSTAL",
+"Fahrradreiniger/Radreinigungsmittel | KELLYS Čistící prostředek KLS BIKE CLEANER náhradní náplň 1000 ml",
+"Flaschenhalter/Getränkehalter | Košík na fľašu KLASIK čierny",
+"Pedale/Trittflächen | Pedály Extend MTB-825A plastic",
+"Sattel/Fahrradsitz | Sedlo SMP MTB 6370 čierne",
+"Speichenreflektor/Radreflektor | odrazka do výpletu malá",
+"Vorderreflektor/Frontreflektor | odrazka přední s držákem malá \"V\"",
+"Rückreflektor/Heckreflektor | odrazka zadní s držákem malá \"V\"",
+"Öl/Schmieröl | olej WD-40 400ml",
+"Ständer/Fahrradständer | stojánek MAX1 středový stavitelný s podložkou 20-29\" černý",
+"Bremsenreiniger/Bremsputzmittel | čistič brzd MAX1 Brake Cleaner 400 ml",
+"Fahrradschlauch/Innerreifen | FISCHER Fahrradschlauch mittel in 26 Zoll | ETRO-Norm: 37/57-559 | Auto Ventil",
+"Rückleuchte/Hecklampe | Walfort Fahrradrückleuchte",
+"Scheinwerfer/Frontlampe | Walfort Fahrrad-Scheinwerfer",
+"Beleuchtungsset/Lichtset | Walfort Fahrradbeleuchtungsset",
+"Klingel/Fahrradglocke (klein) | Kleine Fahrradklingel",
+"Klingel/Fahrradglocke (groß) | Große Fahrradklingel",
+"Sattel/Fahrradsitz (komfortabel) | Fahrradsitz, weich und angenehm",
+"Sattel/Fahrradsitz (einfach) | Fahrradsitz, einfach",
+"Fahrradschlauch/Innerreifen | Walfort Fahrradschlauch 28 x 1 5/8 x 1 3/8 ETRTO: 30-622 // 700 x 35/43c"
+"Schraube/Bolzen | M6 x 40mm, Schwarz"
+"Schraube/Bolzen | M6 x 50mm, Schwarz"
+"Schraube/Bolzen | M5 x 12mm"
+"Schraube/Bolzen | M5 x 16mm"
+"Schraube/Bolzen | M6 x 40mm, Schwarz"
+"Schrauben/Bolzen | Fahrradreparaturset, verschiedene Größen"
+"Mutter | verschiedene Größen"
+"Distanzstücke / Unterlegscheiben |  verschiedene Größen"
+
+
+];
+
+function searchParts() {
+    const query = document.getElementById('searchBox').value.toLowerCase();
+    let results = [];
+
+    for (let part of parts) {
+        if (part.toLowerCase().includes(query)) {
+            results.push(part);
+        }
+    }
+
+    displayResults(results);
+}
+
+function displayResults(results) {
+    const resultsContainer = document.getElementById('searchResults');
+    let html = '';
+
+    for (let result of results) {
+        html += `<p>${result}</p>`;
+    }
+
+    resultsContainer.innerHTML = html;
+
+    if (results.length > 0) {
+        resultsContainer.style.display = 'block';
+    } else {
+        resultsContainer.style.display = 'none';
+    }
+}
+</script>
