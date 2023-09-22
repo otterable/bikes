@@ -328,8 +328,6 @@ body {
     width: auto;
     height: 100%;
     max-width: 100%;
-    opacity: 0;
-    animation: fade 4s infinite;
     object-fit: contain;
     border-radius: 10px;
 	    border: 5px solid white;
@@ -348,7 +346,7 @@ body {
 
 
 
-.showcase-container {
+.poster-container {
     flex: 1; /* Take available space */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
     border-radius: 10px;
@@ -430,19 +428,11 @@ body {
             height: 100%;
             max-width: 100%;
             opacity: 0;
-            animation: fade 4s infinite;
             object-fit: contain;
             border-radius: 10px; /* Add round corners to the image */
         }
 
-        @keyframes fade {
-            0%, 100% {
-                opacity: 0;
-            }
-            20%, 80% {
-                opacity: 1;
-            }
-        }
+      
 		
 		/* ... (existing styles) ... */
         
@@ -1059,67 +1049,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </script>
     
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get DOM elements
-        var showcaseContainer = document.querySelector('.showcase-container');
-        var images = [
-            "{{ url_for('static', filename='slideshow/image1.jpg') }}",
-            "{{ url_for('static', filename='slideshow/image2.jpg') }}",
-            "{{ url_for('static', filename='slideshow/image3.jpg') }}"
-           ];
-        var currentIndex = 0;
-        var preloadImages = [];
 
-        // Preload images
-        images.forEach(function(imageUrl) {
-            var img = new Image();
-            img.src = imageUrl;
-            preloadImages.push(img);
-        });
-
-        function changeImage() {
-            var img = document.createElement('img');
-            img.classList.add('showcase-image');
-            img.src = images[currentIndex];
-            img.alt = 'Showcase Image';
-
-            showcaseContainer.innerHTML = ''; // Clear previous image
-            showcaseContainer.appendChild(img);
-
-            // Reset opacity for smooth transition
-            setTimeout(function() {
-                img.style.opacity = 1;
-            }, 100);
-
-            currentIndex = (currentIndex + 1) % images.length; // Cycle through images
-            setTimeout(changeImage, 4000); // Change image every 4 seconds
-        }
-
-        changeImage();
-    });
-</script>
 	
-    <script>
-        // JavaScript to load images for slideshow dynamically
-        document.addEventListener('DOMContentLoaded', function() {
-            var slideshowContainer = document.querySelector('.slideshow-container');
-            var images = [
-                "image1.jpg",
-                "image2.jpg",
-                "image3.jpg"
-                // Add more image filenames here
-            ];
-
-            // Create img elements and add to slideshow
-            images.forEach(image => {
-                var img = document.createElement('img');
-                img.src = "{{ url_for('static', filename='slideshow/') }}" + image;
-                img.alt = image;
-                slideshowContainer.appendChild(img);
-            });
-        });
-    </script>
 
 	
     <script>
@@ -1265,13 +1196,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         </div>
 
-       <div class="showcase-container">
-		
-            <img class="showcase-image" src="{{ url_for('static', filename='slideshow/image1.jpg') }}" alt="Showcase Image 1">
-            <img class="showcase-image" src="{{ url_for('static', filename='slideshow/image2.jpg') }}" alt="Showcase Image 2">
-            <img class="showcase-image" src="{{ url_for('static', filename='slideshow/image3.jpg') }}" alt="Showcase Image 3">
-            <!-- Add more image elements here -->
-        </div>
+       	<div class="poster-container">
+				<img class="showcase-image" src="{{ url_for('static', filename='bikemountain.png') }}" alt="Poster 1">
+			</div>
 		
 
 </div>

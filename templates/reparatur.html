@@ -100,7 +100,7 @@ body, html {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        padding: 10px;
+        padding: 1px;
         cursor: pointer;
     }
 
@@ -959,34 +959,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <!-- Here is the beginning of a bike listing: -->
-<div class="bike">
 
 	<!-- Here is the bike model name: -->
-    <div class="info-title">Bike title 1</div>
-
-	<!-- Here is the slideshow: -->
-    <div class="slideshow-container">
-        <!-- Images are automatically loaded from the respective folder -->
-        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
-        <img src="/static/slideshow/bike1/{{ image }}">
-        {% endfor %}
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-	     
-		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
-	    <div class="info-text">Otter:</div>
-	    <div class="info-text">Weasel:</div>
-	    <div class="info-text">lolzS:</div>
-	
-		<!-- Here is the stripe button: -->
-
-<!-- Here is the end of the bike listing: -->
-</div>
 
 <!-- Here is the beginning of a bike listing: -->
-<div class="bike">
 
 	<!-- Here is the bike model name: -->
    
@@ -995,10 +971,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="bike">
 
 	<!-- Here is the bike model name: -->
-    <div class="info-title">Bike title 1</div>
+    <div class="info-title">Fahrrad 26"| 009M</div>
+	    <div class="info-title">€100 </div>
+
 
 	<!-- Here is the slideshow: -->
     <div class="slideshow-container">
+	
         <!-- Images are automatically loaded from the respective folder -->
         {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
         <img src="/static/slideshow/bike1/{{ image }}">
@@ -1008,10 +987,25 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 	     
 		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
-	    <div class="info-text">Otter:</div>
-	    <div class="info-text">Weasel:</div>
-	    <div class="info-text">lolzS:</div>
+		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Folgende Teile sind neu:</div>
+	    <div class="info-text">Pedale,
+
+Reflektoren (Rad),
+
+Reflektoren (vorne, hinten),
+
+Scheinwerfer,
+
+Flaschenhalter,
+
+Lenkergriffe,
+
+Handyhalter
+
+</div>
+	  	<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Anpassungen möglich:</div>
+
+	    <div class="info-text">Derzeit ist das Fahrrad ohne Kotflügel, da es zu dicke Reifen hat.Wir können in unserer Werkstatt dünnere Reifen und Kotflügel einbauen.</div>
 	
 		<!-- Here is the stripe button: -->
 
@@ -1132,12 +1126,14 @@ const parts = [
 "Fahrradschlauch/Innerreifen | Walfort Fahrradschlauch 28 x 1 5/8 x 1 3/8 ETRTO: 30-622 // 700 x 35/43c",
 "Schraube/Bolzen | M6 x 40mm, Schwarz",
 "Schraube/Bolzen | M6 x 50mm, Schwarz",
+"Schraube/Bolzen | M6 x 50mm",
 "Schraube/Bolzen | M5 x 12mm",
 "Schraube/Bolzen | M5 x 16mm",
 "Schraube/Bolzen | M6 x 40mm, Schwarz",
 "Schrauben/Bolzen | Fahrradreparaturset, verschiedene Größen",
 "Mutter | verschiedene Größen",
 "Distanzstücke / Unterlegscheiben |  verschiedene Größen",
+"Handyhalter | Generic",
 ];
 
 function searchParts() {

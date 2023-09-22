@@ -116,6 +116,10 @@ def bike_galerie():
 def bike_ankauf():
     return render_template('ankauf.html')
 
+@app.route('/success')
+def bike_success():
+    return render_template('success.html')
+
 @app.route('/reparatur')
 def bike_reparatur():
     return render_template('reparatur.html')
