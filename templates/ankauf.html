@@ -188,7 +188,7 @@ body, html {
 
 
 			  .poster-image {
-				max-width: 40%; /* Adjust the width as needed */
+				max-width: 60%; /* Adjust the width as needed */
 				height: auto;
 				    text-align: center;
 					    padding: 5px 0;
@@ -797,7 +797,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			<div class="content">
 
 		<div class="logo-container">
-				<a href="https://ermine.at/radlzentrum">
+				<a href="https://radlzentrum.ermine.at">
     <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="Logo" id="logo">
 </a>
 
@@ -845,7 +845,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			</div>
 
 		<div class="poster-container">
-				<img class="poster-image" src="{{ url_for('static', filename='poster2.png') }}" alt="Poster 1">
+				<img class="poster-image" src="{{ url_for('static', filename='ankaufpic.png') }}" alt="Poster 1">
 			</div>
 			</div>
 		        </div>
@@ -854,180 +854,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <!-- Here is the start of the container, within which all bike listings are contained: -->
-<div class="bikes-container">
 
-<!-- To create a new bike listing, just copypaste the code below, and change respective values - images, stripe link, caledly, etc. -->
-
-<!-- Here is the beginning of a bike listing: -->
-<div class="bike">
-
-	<!-- Here is the bike model name: -->
-    <div class="info-title">Bike title 1</div>
-
-	<!-- Here is the slideshow: -->
-    <div class="slideshow-container">
-        <!-- Images are automatically loaded from the respective folder -->
-        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
-        <img src="/static/slideshow/bike1/{{ image }}">
-        {% endfor %}
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-	     
-		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
-	    <div class="info-text">Otter:</div>
-	    <div class="info-text">Weasel:</div>
-	    <div class="info-text">lolzS:</div>
-	
-		<!-- Here is the stripe button: -->
-	
-		
-
-		
-<!-- Here is the end of the bike listing: -->
-</div>
-
-<!-- Here is the beginning of a bike listing: -->
-<div class="bike">
-
-	<!-- Here is the bike model name: -->
-    <div class="info-title">Bike title 1</div>
-
-	<!-- Here is the slideshow: -->
-    <div class="slideshow-container">
-        <!-- Images are automatically loaded from the respective folder -->
-        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
-        <img src="/static/slideshow/bike1/{{ image }}">
-        {% endfor %}
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-	     
-		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
-	    <div class="info-text">Otter:</div>
-	    <div class="info-text">Weasel:</div>
-	    <div class="info-text">lolzS:</div>
-	
-		<!-- Here is the stripe button: -->
-
-<!-- Here is the end of the bike listing: -->
-</div>
-
-<!-- Here is the beginning of a bike listing: -->
-<div class="bike">
-
-	<!-- Here is the bike model name: -->
-    <div class="info-title">Bike title 1</div>
-
-	<!-- Here is the slideshow: -->
-    <div class="slideshow-container">
-        <!-- Images are automatically loaded from the respective folder -->
-        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
-        <img src="/static/slideshow/bike1/{{ image }}">
-        {% endfor %}
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-	     
-		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
-	    <div class="info-text">Otter:</div>
-	    <div class="info-text">Weasel:</div>
-	    <div class="info-text">lolzS:</div>
-	
-		<!-- Here is the stripe button: -->
-
-		
-<!-- Here is the end of the bike listing: -->
-</div>
-
-<!-- Here is the beginning of a bike listing: -->
-<div class="bike">
-
-	<!-- Here is the bike model name: -->
-    <div class="info-title">Bike title 1</div>
-
-	<!-- Here is the slideshow: -->
-    <div class="slideshow-container">
-        <!-- Images are automatically loaded from the respective folder -->
-        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
-        <img src="/static/slideshow/bike1/{{ image }}">
-        {% endfor %}
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-	     
-		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
-	    <div class="info-text">Otter:</div>
-	    <div class="info-text">Weasel:</div>
-	    <div class="info-text">lolzS:</div>
-	
-		<!-- Here is the stripe button: -->
-
-<!-- Here is the end of the bike listing: -->
-</div>
-
-<!-- Here is the beginning of a bike listing: -->
-<div class="bike">
-
-	<!-- Here is the bike model name: -->
-    <div class="info-title">Bike title 1</div>
-
-	<!-- Here is the slideshow: -->
-    <div class="slideshow-container">
-        <!-- Images are automatically loaded from the respective folder -->
-        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
-        <img src="/static/slideshow/bike1/{{ image }}">
-        {% endfor %}
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-	     
-		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
-	    <div class="info-text">Otter:</div>
-	    <div class="info-text">Weasel:</div>
-	    <div class="info-text">lolzS:</div>
-	
-		<!-- Here is the stripe button: -->
-
-<!-- Here is the end of the bike listing: -->
-</div>
-
-<!-- Here is the beginning of a bike listing: -->
-<div class="bike">
-
-	<!-- Here is the bike model name: -->
-    <div class="info-title">Bike title 1</div>
-
-	<!-- Here is the slideshow: -->
-    <div class="slideshow-container">
-        <!-- Images are automatically loaded from the respective folder -->
-        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
-        <img src="/static/slideshow/bike1/{{ image }}">
-        {% endfor %}
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-	     
-		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Features:</div>
-	    <div class="info-text">Otter:</div>
-	    <div class="info-text">Weasel:</div>
-	    <div class="info-text">lolzS:</div>
-	
-		<!-- Here is the stripe button: -->
-
-<!-- Here is the end of the bike listing: -->
-</div>
 
 <!-- Here is the end of the bike container: -->
 </div> 
 </div>
 </div>
+
 <div class="button-container2">
     <button class="faq-button" onclick="toggleFAQ()">FAQ</button>
     <button class="impressum-button" onclick="toggleImpressum()">Impressum</button>
