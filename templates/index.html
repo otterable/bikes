@@ -334,6 +334,10 @@ body {
 
 }
 
+
+		
+
+	
 .main-wrapper {
     display: flex;
     justify-content: space-between;
@@ -345,18 +349,28 @@ body {
 }
 
 
-
-.poster-container {
+    /* Desktop layout */
+    @media (min-width: 1301px) {
+	.poster-container {
     flex: 1; /* Take available space */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
     border-radius: 10px;
     max-width: 40.7%; /* Max width to account for the gap */
-	    margin-bottom: 10px;
+    margin-bottom: 10px;
     margin-right: 8px; /* Inner padding */
+}
+}
+@media (max-width: 1300px) { /* Adjust 768px based on your needs */
+    .poster-container {
+        width: 96%; /* 90% width for mobile */
+         display: flex;
+		     margin-right: auto; /* Inner padding */
+		     margin-left: 5px; /* Inner padding */
+
+        justify-content: center;
 
 }
-
-
+}
 .werkstatt-container {
     flex: 1; /* Take available space */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
@@ -1243,16 +1257,7 @@ Klicken Sie auf die Schaltflächen in der Seitenleiste, um einen Dienst auszuwä
 	<div class="lmao expandable-section">
     <!-- Your content here -->
     <div class="expandable-content">
-<!-- First Link/Button -->
-<div> 
-<a href="http://3dprintwien.ermine.at">
-    <button class="weiter-button4">
-      3Dprintwien.at</button>
-	  </div>
-<div>
-Schneller, zuverlässiger 3D-Druckservice, der Versand und Modellierung anbietet.
-</a>
-</div> 
+
 
 <div> 
 <a href="http://boardgames.ermine.at">
@@ -1276,16 +1281,7 @@ Schneller, zuverlässiger 3D-Druckservice, der Versand und Modellierung anbietet
 </a>
 </div>
 <!-- Third Link/Button -->
-<a href="http://soundscapes.ermine.at">
-   <div> <button class="weiter-button3">
-	Soundscapes
-    </button>
-	</div>
-<div>
-        Eine Website mit Soundscapes – Umgebungsgeräuschen aller Art. Alles in Endlosschleife.
 
-</a>
-    </div>
 </div>
 
 
