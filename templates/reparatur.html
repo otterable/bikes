@@ -953,7 +953,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <!-- Here is the start of the container, within which all bike listings are contained: -->
-<div class="bikes-container">
 
 <!-- To create a new bike listing, just copypaste the code below, and change respective values - images, stripe link, caledly, etc. -->
 
@@ -968,49 +967,7 @@ document.addEventListener('DOMContentLoaded', function() {
    
 
 <!-- Here is the beginning of a bike listing: -->
-<div class="bike">
 
-	<!-- Here is the bike model name: -->
-    <div class="info-title">Fahrrad 26"| 009M</div>
-	    <div class="info-title">€100 </div>
-
-
-	<!-- Here is the slideshow: -->
-    <div class="slideshow-container">
-	
-        <!-- Images are automatically loaded from the respective folder -->
-        {% for image in ['bike-image1a.png', 'bike-image1b.png', 'bike-image1c.png'] %}
-        <img src="/static/slideshow/bike1/{{ image }}">
-        {% endfor %}
-        <span class="prev"></span>
-        <span class="next"></span>
-    </div>
-	     
-		 <!-- Here is the description of the bike: -->
-		<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Folgende Teile sind neu:</div>
-	    <div class="info-text">Pedale,
-
-Reflektoren (Rad),
-
-Reflektoren (vorne, hinten),
-
-Scheinwerfer,
-
-Flaschenhalter,
-
-Lenkergriffe,
-
-Handyhalter
-
-</div>
-	  	<div class="info-subtitle" style="color: #d62828; font-weight: bold;">Anpassungen möglich:</div>
-
-	    <div class="info-text">Derzeit ist das Fahrrad ohne Kotflügel, da es zu dicke Reifen hat.Wir können in unserer Werkstatt dünnere Reifen und Kotflügel einbauen.</div>
-	
-		<!-- Here is the stripe button: -->
-
-<!-- Here is the end of the bike listing: -->
-</div>
 
 <!-- Here is the end of the bike container: -->
 </div> 
